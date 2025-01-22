@@ -108,31 +108,114 @@ print(n) #15.3
 
 a='jay'
 b='om'
-
 n=a*b
 print(n) #error
 
 a='jay'
 b='om'
-
 n=a+b
 print(n) #jayom
 
 a=[1,2,3]
 b=[7,9,12]
-
 n=a+b
 print(n) #[1,2,3,9,12]
 
 n=10+13*2
 #my guess is n will be 46.
-#the expected answer was incorrect. the correct answer is 36. that is due to what is called the operator precedence.
+#the expected answer was incorrect. the correct answer is 36. That is due to what is called the operator precedence.
 print(n)
 
 n=((10+13)*2) # is 46
 print(n)
 
+#introduation to strings
 
+s="coffee"
+t="bread"
+print(s[1]) #it will show c
+#next
+s="coffee"
+t="bread"
+print(s[1:4])#it will off
+#next
+s="0123456789"
+a=s[5]
+b=s[6]
+print(a) #5
+print(b) #6
+print(a+b) #56
+#next
+s="0123456789"
+a=int(s[5])
+b=int(s[6])
+print(a) #5
+print(b) #6
+print(a+b) #11
+
+#more about string
+
+s="good"
+print(s[0]*5) #ggggg
+#next
+x="india"
+print(x== "india") #true
+print(x== "India") #false
+#next
+print("apple" > "one" ) #false
+print( "four" < "ten") #true
+print( 4 < 10) #true
+print("ab" < "az") #true
+print("abcdef" < "abcde") #true
+#next
+s="python"
+print(s[-1]) #n
+print(s[-2]) #o
+print(s[-3]) #h
+print(s[-4]) #t
+print(s[-5]) #y
+print(s[-6]) #p
+#next
+s="hkgjhkgkkgjkjdghfuu"
+print(len(s)) #19  = this is number of letter in line
+print(s[18]) #u
+print(s[19]) #error
+#next
+
+ #Operators and Expressions 2
+
+#arithmetic operators(+,-,*,/,//,%,**)
+print("addition",2+3) #addition 5
+print("subtraction",9-1) #subtraction 8
+print("multiplication",5*4) #multiplication 20
+print("division",7/3) #division 2.3333333333333335
+print("floor division",7//3) #floor division 2
+print("modulus",7%3) #modulus 1
+print("exponential",6**2) #exponential 36
+
+#relational operators(>,<,>=,<=,==,!=)
+print(5>10) #false
+print(10>5) #true
+print(5<10) #true
+print(10<5) #false
+print(5>=5) #true
+print(5<=5) #true
+print(5==5) #true
+print(5!=5) #false
+
+#logical operators (and, or, not)
+print(True and True) #true
+print(True and False) #false
+print(False and True) #false
+print(False and False) #false
+
+print(True or True) #true
+print(True or False) #true
+print(False or True) #true
+print(False or False) #false
+
+print(not(True)) #false
+print(not False) #true
 
 
 
