@@ -100,8 +100,8 @@ print(5 == x > 4) #true
 #Escape characters 
 #print('It's a beautiful day') #error
 print('It\'s a beautiful day') #it's a beautiful day  , and \ this is a escape characters
-print("We are from \"IIT\" Madras") #We are from IIT Madras
-print('We are from "IIT" Madras') #
+print("We are from \"IIT\" Madras") #We are from "IIT" Madras
+print('We are from "IIT" Madras') #We are from "IIT" Madras
 
 #next
 print('My name is Om. \t\tI am from darbhanga') #My name is Om.      I am from darbhanga , \t this escape character put gape
