@@ -178,10 +178,118 @@ x = x.replace("S", "s")
 x = x.replace("M", "m")
 print(x) #Python string methods
 
+#An Interesting Cipher: More on Strings
+
+alpha='abcdefghijklmnopqrstuvwxyz'
+
+i=1
+print(alpha[i]) #b
+print(alpha[i+1]) #c
+print(alpha[i+2]) #d
+
 #next
+alpha='abcdefghijklmnopqrstuvwxyz'
 
+i=24
+print(i%26) #24
+print(alpha[i%26]) #y
+print(alpha[(i+1)%26]) #z
+print(alpha[(i+2)%26]) #a
 
+#next
+alpha='abcdefghijklmnopqrstuvwxyz'
 
+o='om kumar'
+#i expect to output tvebstibo
+t=''
+
+print(alpha.index(o[0])) #14
+print(((alpha.index(o[0]))+1)%26) #15
+print(alpha[((alpha.index(o[0]))+1)%26]) #p
+t=t+(alpha[((alpha.index(o[0]))+1)%26]) 
+print(t) #p
+
+i=0
+k=2
+t=t+(alpha[(((alpha.index(o[i]))+k)%26)])
+t=t+(alpha[(((alpha.index(o[i+1]))+k)%26)])
+t=t+(alpha[(((alpha.index(o[i+2]))+k)%26)])
+t=t+(alpha[(((alpha.index(o[i+3]))+k)%26)])
+t=t+(alpha[(((alpha.index(o[i+4]))+k)%26)])
+t=t+(alpha[(((alpha.index(o[i+5]))+k)%26)])
+t=t+(alpha[(((alpha.index(o[i+6]))+k)%26)])
+print(t) #pqomwoct
+
+#Introduction to the if statement
+
+#if condition
+#let us consider the movie "Avengers". This is a 13+ movie.
+print("Please enter your date of birth")
+birth_year=int(input())
+
+current_year=2025
+
+age=current_year-birth_year
+if(age<13):
+  print("You are under age, you cannot watch this movie.")
+  print("Wait until you are old enough to watch this movie.")
+else:  
+  print("you are old enough to watch avengers, enjoy!")
+  print("Don't forget to watch the sequels and prequels.")
+
+print("Have a nice time")
+
+# Please enter your date of birth
+# 2006
+# you are old enough to watch avengers, enjoy!
+# Don't forget to watch the sequels and prequels.
+# Have a nice time
+
+# Tutorial on if, else and else-if (elif) conditions
+
+#find wether the number is even or odd
+num = int(input("Enter a number: "))
+
+if(num % 2 == 0) :
+  print("The number is even")
+else:
+  print("The number is odd")
+# Enter a number: 5
+# The number is odd
+
+#next
+#find wether the given number ends with 0 or 5 or any other number
+num = int(input("Enter a number: "))
+if(num % 5 == 0):
+  if(num % 10 == 0):
+    print('0')
+  else:
+    print('5')
+else:
+  print("other") 
+#Enter a number: 4
+#other
+
+#next
+#find the grade of student based on the given marks from 0 to 100
+marks = int(input("Enter your marks: "))
+
+if(marks>=90 and marks<100):
+  print("A")
+elif(marks>=80 and marks<90):
+  print("B")
+elif(marks>=70 and marks<80):
+  print("C")
+elif(marks>=60 and marks<70):
+  print("D")
+elif(marks>=0 and marks<0):
+  print("E")
+else:
+  print("Invalid input")
+# Enter your marks: -2
+# Invalid input
+
+#Different ways to import a library
 
 
 
