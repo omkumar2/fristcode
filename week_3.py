@@ -106,16 +106,93 @@ else:
         rev = rev * 10 + r
     print(rev - 2 * rev)
 
+#or
+num = int(input("Enter the number: "))
+absNum =abs(num)
+rev = absNum % 10
+absNum = absNum // 10
+while(absNum > 0):
+    r = absNum % 10
+    absNum = absNum // 10
+    rev = rev * 10 + r
+if(num >= 0):
+    print(rev)
+else:
+    print(rev - 2 * rev)
+
 #Enter the number: -1234
 #-4321
 
 #next
+rev = absNum % 10
+absNum = absNum // 10
+while(absNum > 0):
+    r = absNum % 10
+    absNum = absNum // 10
+    rev = rev * 10 + r
+if(num < 0):
+    rev = rev - 2 * rev
+  
+if(num == rev):
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
 
+#Enter the number: 12321       Enter the number: 456
+#Palindrome                    Not a Palindrome
 
+# Introduction to for loop
 
+#An example of a for loop
 
+for i in range(4):
+ print(i,"Hello India")
+ print("*************")
+ print("@@@@@@@@@@@@@")
+ 
+# 0 Hello India
+# *************
+# @@@@@@@@@@@@@
+# 1 Hello India
+# *************
+# @@@@@@@@@@@@@
+# 2 Hello India
+# *************
+# @@@@@@@@@@@@@
+# 3 Hello India
+# *************
+# @@@@@@@@@@@@@
 
+#next
+#An example of a for loop
+print("Enter a number:")
+n=int(input())
 
+for i in range(n):
+  if (i%2==0):
+    print(i,"Hello India")
+  else:
+    print(i,"Hi World")
+    
+# Enter a number:
+# 4
+# 0 Hello India
+# 1 Hi World
+# 2 Hello India
+# 3 Hi World
+
+# for loop to add the first n numbers
+
+#Adds frist 10 integer numbers
+num=int(input("Enter a number:"))
+
+ans=0
+for i in range(num):
+  ans=ans+i
+print("The answer is",ans)
+
+# nter a number:11
+# The answer is 55
 
 
 
