@@ -497,10 +497,338 @@ for x in range(11):
 # 6
 # 9
 
+#GrPA 1
+# Note this prefix code is to verify that you are not using any for loops in this exercise. This won't affect any other functionality of the program.
+with open(__file__) as f:
+    content = f.read().split("# <eoi>")[2]
+if "for " in content:
+    print("You should not use for loop or the word for anywhere in this exercise")
+
+# This is the first line of the exercise
+task = input()
+# <eoi>
+
+if task == "sum_until_0":
+    total = 0
+    n = int(input())
+    while (n != 0): # the terminal condition
+        total += n # add n to the total
+        n = int(input()) # take the next n form the input
+    print(total)
+
+elif task == "total_price":
+    total_price = 0
+    while True: # repeat forever since we are breaking inside
+        line = input()
+        if line == 'END': # The terminal condition
+            break
+        quantity, price = line.split() # split uses space by default
+        quantity, price = int(quantity), int(price) # convert to ints
+        total_price = total_price + (quantity * price) # accumulate the total price
+    print(total_price)
+
+elif task == "only_ed_or_ing":
+    word = input()
+    while(word != 'STOP'):
+        if ((word.endswith('ed')) or (word.endswith('ED')) or (word.endswith('ing')) or (word.endswith('ING'))):
+            print(word)
+        else:
+            pass
+        word = input()
+
+elif task == "reverse_sum_palindrome":
+    n = int(input())
+    while(n != -1):
+        if n > 0:
+            reverse = int((str(n))[::-1])
+            sum = n + reverse
+            reverse_sum = int((str(sum))[::-1])
+            if (sum == reverse_sum):
+                print(n)
+            else:
+                pass
+        else:
+            pass
+        n = int(input())
+
+elif task == "double_string":
+    line = input()
+    while(line != ''):
+        repeatedTwice = line * 2
+        print(repeatedTwice)
+        line = input()
+
+elif task == "odd_char":
+    word = input()
+    while(word != word.endswith('.')):
+        odd_char = word[::2]
+        print(odd_char, end = ' ')
+        word = input()
+
+elif task == "only_even_squares":
+    num = input()
+    while(num != 'NAN'):
+        num = int(num)
+        square = num ** 2
+        if (square % 2 == 0):
+            print(square)
+        else:
+            pass
+        num = input()
+
+elif task == "only_odd_lines":
+    new_line = ''
+    line = input()
+    while(line != 'END'):
+        new_line = new_line + line + ' '
+        line = input()
+    split_line = new_line.split()
+    odd_line = split_line[::2]
+    reverse_odd_line = odd_line[::-1]
+    reversed_line = '\n'.join(reverse_odd_line)
+    print(reversed_line)
+
+#GrPA 2
+# Note this prefix code is to verify that you are not using any for loops in this exercise. This won't affect any other functionality of the program.
+with open(__file__) as f:
+    content = f.read().split("# <eoi>")[2]
+if "while " in content:
+    print("You should not use while loop or the word while anywhere in this exercise")
+
+# your code should not use more than 7 for loops 
+# assuming one for loop per problem
+if content.count("for ")>7:
+    print("You should not use more than 7 for loops")
+
+# This is the first line of the exercise
+task = input()
+# <eoi>
+
+if task == 'factorial':
+    n = int(input())
+    result = 1
+    for i in range (1 , n+1):
+       result *= i
+
+    print(result)
 
 
+elif task == 'even_numbers':
+    n = int(input())
+    for i in range (0 , n +1 , 2):
+        print(i)
+
+elif task == 'power_sequence':
+    n = int(input())
+    result = 1
+    for i in range(n):
+        print(2**i)
 
 
+elif task == 'sum_not_divisible':
+    n = int(input())
+    sum = 0
+    for i in range(1 , n):
+        if (i % 4 != 0 and i % 5 != 0 ):
+            sum += i
+    print(sum)
+
+elif task == 'from_k':
+    n = int(input())
+    k = int(input())
+    count = 0
+    for i in range (k,0,-1):
+        str_i = str(i)
+        if "5" not in str_i and '9' not in str_i and i%2!=0 :
+            print(str_i[::-1])
+            count += 1
+            if count == n :
+                break
+
+elif task == 'string_iter':
+    n = input()
+    prev = 1
+    for i in range(len(n)):
+        curr = int(n[i])
+        print(curr * prev)
+        prev = curr
+
+elif task == 'list_iter':
+    lst = eval(input()) # this will load the list from input
+    for i in lst:
+        print(f'{i} - type: {type(i)}')
+
+else:
+    print("Invalid")
+
+#GrPA 3
+task = input()
+
+if task == 'permutation':
+    s = input()
+    for i in s:
+        for j in s:
+            if (i != j):
+                print(f'{i}{j}')
+
+elif task == 'sorted_permutation':
+    s = input()
+    for i in s:
+        for j in s:
+            if ((i != j) and (i < j)):
+                print(f'{i}{j}')
+
+elif task == 'repeat_the_repeat':
+    n = int(input())
+    for i in range(1, n + 1):
+        repeat_the_repeat = 0
+        for j in range(1, n + 1):
+            repeat_the_repeat = (repeat_the_repeat * 10) + j
+        print(repeat_the_repeat)
+
+elif task == 'repeat_incrementally':
+    n = int(input())
+    if (n > 0):
+        repeat_incrementally = 0
+        for i in range(1, n + 1):
+            repeat_incrementally = (repeat_incrementally * 10) + i
+            print(repeat_incrementally)
+
+elif task == 'increment_and_decrement':
+    n = int(input())
+    if (n > 0):
+        increment = ''
+        for i in range(1, n + 1):
+            increment = increment + str(i)
+            decrement = increment[-2::-1]
+            increment_and_decrement = increment + decrement
+            print(increment_and_decrement) 
+
+#GrPA 3
+task = input()
+
+if task == 'permutation':
+    s = input()
+    for i in s:
+        for j in s:
+            if (i != j):
+                print(f'{i}{j}')
+
+elif task == 'sorted_permutation':
+    s = input()
+    for i in s:
+        for j in s:
+            if ((i != j) and (i < j)):
+                print(f'{i}{j}')
+
+elif task == 'repeat_the_repeat':
+    n = int(input())
+    for i in range(1, n + 1):
+        repeat_the_repeat = 0
+        for j in range(1, n + 1):
+            repeat_the_repeat = (repeat_the_repeat * 10) + j
+        print(repeat_the_repeat)
+
+elif task == 'repeat_incrementally':
+    n = int(input())
+    if (n > 0):
+        repeat_incrementally = 0
+        for i in range(1, n + 1):
+            repeat_incrementally = (repeat_incrementally * 10) + i
+            print(repeat_incrementally)
+
+elif task == 'increment_and_decrement':
+    n = int(input())
+    if (n > 0):
+        increment = ''
+        for i in range(1, n + 1):
+            increment = increment + str(i)
+            decrement = increment[-2::-1]
+            increment_and_decrement = increment + decrement
+            print(increment_and_decrement) 
+
+#GrPA 4
+# this is to ensure that you cannot use the built in any, all and min function for this exercise but you can use it in the OPPEs.
+any = None 
+all = None
+min = None 
+
+task = input()
+
+
+if task == 'factors':
+    n = int(input())
+    if (n > 0):
+        for i in range(1, n + 1):
+            if (n % i == 0):
+                print(i)
+
+elif task == 'find_min':
+    n = int(input())
+    min = 99999999999999999
+    num = int(input())
+    if (n > 1):
+        while (n > 1):
+            if num < min:
+                min = num
+            num = int(input())
+            n -= 1
+    else:
+        min = num
+    print(min)
+
+elif task == 'prime_check':
+    num = int(input())
+    flag = False
+    if (num > 0):
+        if (num == 2):
+            flag = True
+        else:
+            for i in range(3, num + 1):
+                for j in range(2, i):
+                    if (i % j == 0):
+                        flag = False
+                        break
+                    else:
+                        flag = True
+        print(flag)
+
+elif task == 'is_sorted':
+    s= input()
+    flag = True
+    for i in range(len(s) - 1):
+        if (s[i] > s[i + 1]):
+            flag = False
+            break
+    print(flag)
+
+elif task == 'any_true':
+    n = int(input())
+    num = int(input())
+    flag = False
+    while(n > 1):
+        if(num % 3 == 0):
+            flag = True
+        n -= 1
+        num = int(input())
+    print(flag)
+
+elif task == 'manhattan':
+    direction = input()
+    x_distance, y_distance = 0, 0
+    while (direction != 'STOP'):
+        if (direction =='LEFT'):
+            x_distance -= 1
+        elif (direction == 'RIGHT'):
+            x_distance += 1
+        elif (direction == 'UP'):
+            y_distance += 1
+        elif (direction == 'DOWN'):
+            y_distance -= 1
+        x, y = abs(x_distance - 0), abs(y_distance - 0)
+        manhattan_distance = x + y
+        direction = input()
+    print(manhattan_distance)
 
 
 
