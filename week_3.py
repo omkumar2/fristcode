@@ -290,15 +290,103 @@ print('{0:5d}'.format(1111))
 #  111
 #  1111
 
+#Tutorial on for loop and difference between while loop and for loop
 
+#find the factorial of the given number
+num = int(input("Enter a number: "))
+fact = 1
+if num < 0:
+  print("Factorial does not exist for negative numbers")
+else:
+  for i in range(1, num + 1):
+    fact = fact * i
+  print("The factorial of", num, "is", fact)
+  #   for i in range(num, 1, -1):
+  #   fact = fact * i
+  # print("The factorial of", num, "is", fact)
 
+# Enter a number: 5
+# The factorial of 5 is 120
+#find the number of digits in the given number
+num = abs(int(input("Enter a number: ")))
+strNum = str(num)
+digits = 0
+for c in strNum:
+  digits = digits + 1
+print(digits)
+# lentgh = len(str(num))
+# print(lentgh)
 
+# Enter a number: 4567
+# 4
 
+#next
+#rerver the digits in the given number
+num = int(input("Enter a number: "))
+absStrNum = str(abs(num))
+rev = ""
+for c in absStrNum:
+  rev = c + rev
+if (num >= 0):
+  print(rev)
+else:
+  print("-" + rev)
 
+# Enter a number: 7890
+# 0987
 
+#next
+#find whether the entered number is palindrome or not
+num=int(input("Enter a number: "))
+absStrNum = str(abs(num))
+rev = ''
+for c in absStrNum:
+  rev = c + rev
+if num < 0:
+  rev = '-' + rev
+if num == int(rev):
+  print("Palindrome")
+else:
+  print("Not a Palindrome")
 
+# Enter a number: 123
+# Not a Palindrome
 
+#  Nested for loop
 
+s="VIBGYOR"
+
+for i in range(5):
+  print(s[i])
+ 
+# V
+# I
+# B
+# G
+# Y
+
+#next
+#two brothers sharath and tanmay
+s='VIBGYOR'
+t='VIBGYOR'
+#example of nested for loop
+count=0
+for i in range(7):
+  for j in range(7):
+    print(i,j,s[i],s[j])
+    count=count+1
+
+print("the total ways in which the two brothers can wear 7 different colours:",count)
+
+#i=0 and j=0 print VV
+#i=0 and j=1 print VI
+#i=0 and j=2 print VB
+#i=0 and j=3 print VG
+#....
+#i=0 and j=6 print VR
+#i=1 and j=0 print IV
+
+#Tutorial on nested loops
 
 
 
