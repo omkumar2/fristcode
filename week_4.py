@@ -180,6 +180,41 @@ print("when we are sure of the list that we are handling and we are also sure th
 
 #More on Lists
 
+l1 = [1,2,3]
+l2 = [10,20,30]
+l12 = l1 + l2
+l21 = l2 + l1
+print(l12, l21) #[1, 2, 3, 10, 20, 30] [10, 20, 30, 1, 2, 3]
+
+#next
+l1= [0]*10
+print(l1) #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+l2= [1,2,3]*5
+print(l2) #[1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3]
+
+#next
+l1 = [1,2,3]
+l2 = [1,2,3]
+l3 = [1,3,2]
+print(l1 == l2) #true 
+print(l2 == l3) #false
+print(l2 < l3) #true
+
+#next
+print([1,2] < [2,1]) #true
+print([] < [1,2,3]) #true
+print([2,3] < [3]) #true
+print([] < [1]) #true
+
+#next
+
+
+
+
+
+
+
+
 
 
 
