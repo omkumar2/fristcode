@@ -207,7 +207,62 @@ print([2,3] < [3]) #true
 print([] < [1]) #true
 
 #next
+l = [1,2,4]
+print(l) #[1,2,4]
+l[2] = 3
+print(l) #[1,2,3]
 
+s= 'abce'
+print(s[3]) #e
+s[3] = 'd'
+print(s) #'str' object does not support item assignment      or  error
+
+#next
+x=5
+y=x
+x=10
+print(x,y) #10 5
+
+l1=[1,2,3]
+l2=l1
+l1[0]=100
+print(l1,l2) #[100, 2, 3] [100, 2, 3]
+
+#next
+l1=[1,2,3]
+l2=list(l1)
+l3=l1[:]
+l4=l1.copy()
+
+l2[0]=100
+l3[1]=200
+l4[2]=300
+
+print(l1,l2,l3,l4) #[1, 2, 3] [100, 2, 3] [1, 200, 3] [1, 2, 300]
+
+print(l1 is l2) #false
+print(l1 is l3) #false
+print(l1 is l4) #false
+print(l1 is l5) #false
+
+# function
+def add(x):
+  x = x + 1
+  return x
+
+x = 5
+print(add(x)) #6
+print(x) #5
+
+def add(x):
+  x.append(1)
+  return x
+
+x = [5]
+print(add(x)) #[5,1]
+print(x) #[5,1]
+
+#next
 
 
 
