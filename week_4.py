@@ -243,7 +243,7 @@ print(l1,l2,l3,l4) #[1, 2, 3] [100, 2, 3] [1, 200, 3] [1, 2, 300]
 print(l1 is l2) #false
 print(l1 is l3) #false
 print(l1 is l4) #false
-print(l1 is l5) #false
+print(l1 is l5) #true
 
 # function
 def add(x):
@@ -263,10 +263,104 @@ print(add(x)) #[5,1]
 print(x) #[5,1]
 
 #next
+l=[1,2,3]
+print(l) #[1,2,3]
 
+l.append(4)
+print(l) #[1,2,3,4]
 
+l.insert(2,9) # Insert 9 at index 2
+print(l) #[1,2,9,3,4]
 
+#next
+l=[1,2,3]
+print(l) #[1,2,3]
 
+l.remove(2)
+print(l) #[1,3]
+
+l.pop(0) # Remove the element at index 0
+print(l) #[3]
+
+#next
+l=[2,6,1,50,3,7,5]
+l.sort()
+print(l) #[1, 2, 3, 5, 6, 7, 50]
+
+#next
+l=[2,6,1,50,3,7,5]
+l.reverse()
+print(l) #[5, 7, 3, 50, 1, 6, 2]
+
+# More on Sets
+
+st={1, 2, 3, 4, 5, 1, 2, 3, 4, 5}
+print(st) #{1, 2, 3, 4, 5}
+print(st[0]) #set' object is not subscriptable          or   error
+
+#next
+A={1, 3, 5}
+B={1, 2, 3, 4, 5}
+print(A.issuperset(B)) #false   
+
+#next
+A = {1, 2, 3}
+B = {3, 4, 5}
+c1 = A.union(B)
+c2 = A | B
+print(c1, c2) #{1, 2, 3, 4, 5} {1, 2, 3, 4, 5}
+
+#next
+A = {1, 2, 3}
+B = {3, 4, 5}
+c1 = A.intersection(B)
+c2 = A & B
+print(c1, c2) #{3} {3}
+
+#next
+A = {1, 2, 3}
+B = {3, 4, 5}
+c1 = A.difference(B)
+c2 = A - B
+print(c1, c2) #{1, 2} {1, 2}
+
+#More on Tuples
+
+t = 1, 2, 3
+print(t, type(t)) #(1, 2, 3) <class 'tuple'>
+
+x, y, z = t
+print(x, y, z)  #1 2 3
+
+#next
+X = 5
+Y = 10
+X, Y = Y, X
+print(X, Y) # 10 5
+
+#next
+l = [10]
+print(l, type(l)) #[10] <class 'list'>
+
+t = (10)
+print(t, type(t)) #10 <class 'int'>
+
+t = (10,)
+print(t, type(t)) #(10,) <class 'tuple'>
+
+#next
+t = ([1, 2], ['a', 'b'])
+t[0] = [10, 20]
+print(t) #'tuple' object does not support item assignment       or   error
+
+#next
+t = ([1, 2], ['a', 'b'])
+t[0][0] = 10
+print(t) #([10, 2], ['a', 'b'])
+
+#we can not modify "Tuple" but inside the "Tuple" we can modify the "list" 
+
+#next
 
 
 
