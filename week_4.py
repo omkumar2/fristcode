@@ -360,7 +360,174 @@ print(t) #([10, 2], ['a', 'b'])
 
 #we can not modify "Tuple" but inside the "Tuple" we can modify the "list" 
 
+# : List Comprehensions
+
+a = 10
+b = 20
+'''
+if a < b:
+  small = a
+else:
+  small = b
+''' #both code are same
+small = a if a < b else b
+print(small)  # 10
+
 #next
+a = 5
+'''
+while a > 0:
+  print(a)
+  #a = a - 1
+  a -= 1
+  '''  #the both code is same
+while a > 0: print(a); a -= 1
+
+# 5
+# 4
+# 3
+# 2
+# 1
+
+#next
+fruits = ["mango", "apple", "banana", "orange", "pineapple", "watermelon", "guava", "kiwi"]
+'''
+newList = []
+for fruit in fruits:
+  if "n" in fruit:
+    newList.append(fruit.capitalize())
+    ''' # again the code are same
+newList = [fruit.capitalize() for fruit in fruits if "n" in fruit]
+print(newList) # ['Mango', 'Banana', 'Orange', 'Pineapple', 'Watermelon']
+
+# Introduction to Functions
+
+fruits = ["mango", "apple", "banana", "orange", "pineapple", "watermelon", "guava", "kiwi"]
+'''
+newList = []
+for fruit in fruits:
+  if "n" in fruit:
+    newList.append(fruit.capitalize()) #capitalize() is used to capitalize the first letter of the string
+'''
+newList = [fruit.capitalize() for fruit in fruits if "n" in fruit]
+print(newList)  #['Mango', 'Banana', 'Orange', 'Pineapple', 'Watermelon']
+
+# Introduction to Functions
+
+def add(a,b):
+  ans=a+b
+  print(ans)
+
+add(1,3) #4
+
+def sub(a,b):
+  ans=a-b
+  print(ans)
+
+sub(10,8) #2
+
+def discount(cost,d):
+  ans=cost-(cost*(d/100))
+  print(ans)
+
+discount(100,8.3) #91.7
+
+add(17,5)+sub(100,3)+discount(1500,7.5) #TypeError: unsupported operand type(s) for +: 'NoneType' and 'NoneType'    and it print 22 ,  97
+
+#next
+def add(a,b):
+  ans=a+b
+  return ans
+
+a=2
+b=15
+ans=add(a,b)+10
+ans=a+b+10
+print(ans) #27
+
+#next
+def discount(cost,d):
+  ans=cost-(cost*(d/100))
+  return ans
+
+print("Enter the cost price") #1000
+c=int(input())
+print("Enter the discount") #11
+disc=int(input())
+print("The final discounted price is:",discount(c,disc)) #The final discounted price is: 890.0
+
+
+print("Enter the cost price") #1000
+x=int(input())
+print("Enter the discount") #11
+y=int(input())
+print("The final discounted price is:",discount(x,y)) #The final discounted price is: 890.0
+
+#More Examples of Functions
+
+#let write a few function on lists
+
+def frist_element(l):
+  return l[0]
+x=[1,2,3]
+print(frist_element(x)) #1
+
+def second_element(l):
+  return l[1]
+print(second_element(x)) #2
+
+#next
+#let write a few function on lists
+
+def list_min(l):
+  mini=l[0]
+  for i in range(len(l)):
+    if(l[i]<mini):
+      mini=l[i]
+  return mini
+
+def list_max(l):
+  maxi=l[0]
+  for i in range(len(l)):
+    if(l[i]>maxi):
+      maxi=l[i]
+  return maxi
+
+def list_appendbefore(l,z):
+  newl=[]
+  for i in range(len(z)):
+    newl.append(z[i])
+  for i in range(len(l)):
+    newl.append(l[i])
+  return newl
+
+def list_appendend(l,z):
+  newl=[]
+  for i in range(len(l)):
+    newl.append(l[i])
+  for i in range(len(z)):
+    newl.append(z[i])
+  return newl
+
+def list_average(l):
+  sum=0
+  for i in range(len(l)):
+    sum=sum+l[i]
+  ans=sum/len(l)
+  return ans
+
+l=[1,2,3,4,5,-10,6,4,100]
+print(list_min(l)) #-10
+print(list_max(l)) #100
+z=[10,20,30]
+print(list_appendbefore(l,z)) #[10, 20, 30, 1, 2, 3, 4, 5, -10, 6, 4, 100]
+print(list_appendend(l,z)) #[1, 2, 3, 4, 5, -10, 6, 4, 100, 10, 20, 30]
+print(list_average(l)) #12.777777777777779
+
+#Types of Function Arguments
+
+
+
 
 
 
